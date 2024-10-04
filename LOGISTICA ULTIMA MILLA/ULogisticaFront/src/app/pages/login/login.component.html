@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-title color="success">
+        <ion-title>LOGISTICA ULTIMA MILLA</ion-title>
+      </ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button (click)="goHome()">Regresar</ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="login-container">
+    <form [formGroup]="formularioLogin" (ngSubmit)="getLogin(formularioLogin.value)">
+      <ion-item>
+        <ion-label position="floating">Correo Electrónico</ion-label>
+        <ion-input type="email" name="email" formControlName="usuarioRed"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" name="password" formControlName="clave"></ion-input>
+      </ion-item>
+
+      <ion-button expand="full" type="ngSubmit" color="success">Entrar</ion-button>
+    </form>
+  </div>
+</ion-content>

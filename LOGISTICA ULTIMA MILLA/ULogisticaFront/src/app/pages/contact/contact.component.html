@@ -1,0 +1,28 @@
+<ion-content class="ion-padding">
+  <div class="contact-container">
+    <form [formGroup]="formularioContacto" (ngSubmit)="getContacto(formularioContacto.value)">
+      
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input type="text" name="nombre" formControlName="nombre"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Correo Electrónico</ion-label>
+        <ion-input type="email" name="email" formControlName="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Asunto</ion-label>
+        <ion-input type="text" name="asunto" formControlName="asunto"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Mensaje</ion-label>
+        <ion-textarea name="mensaje" formControlName="mensaje"></ion-textarea>
+      </ion-item>
+
+      <ion-button expand="full" type="submit" color="success" [disabled]="!formularioContacto.valid">Enviar</ion-button>
+    </form>
+  </div>
+</ion-content>
